@@ -75,21 +75,24 @@ const Navbar = () => {
       </div>
 
       <div className={`mobile-menu ${visiblityStatus ? "open" : ""}`}>
-        <a href="#">
-          <b>Home</b>
-        </a>
-        <a href="#">
-          <b>Registration</b>
-        </a>
-        <a href="#">
-          <b>Problem Statement</b>
-        </a>
-        <a href="#">
-          <b>Timeline</b>
-        </a>
-        <a href="#">
-          <b>Contact</b>
-        </a>
+      <Link to="/">
+            <b>Home</b>
+          </Link>
+          <Link to="/about">
+            <b>About</b>
+          </Link>
+          <Link to="/login">
+            <b>Registration</b>
+          </Link>
+          <Link to="/problem">
+            <b>Problem Statement</b>
+          </Link>
+          <Link to="/timeline">
+            <b>Timeline</b>
+          </Link>
+          <Link to="/contact">
+            <b>Contact</b>
+          </Link>
       </div>
     </nav>
   );

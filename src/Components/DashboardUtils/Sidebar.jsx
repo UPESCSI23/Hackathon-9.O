@@ -33,7 +33,7 @@ export function Sidebar({ activeTab, onTabChange, isOpen, onClose }) {
         ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
       `}
       >
-        <div className="flex items-center justify-between mb-8 px-4">
+        <div className="flex items-center justify-between mb-8 pt-20 px-4">
           <div className="flex items-center gap-2">
             <LayoutDashboard className="h-6 w-6 text-white" />
             <span className="text-white font-semibold">HACKATHON 9.0</span>
@@ -46,7 +46,7 @@ export function Sidebar({ activeTab, onTabChange, isOpen, onClose }) {
           </button>
         </div>
 
-        <nav className="flex-1">
+        <nav className="flex-1 pt-5">
           {menuItems.map((item) => (
             <button
               key={item.label}
@@ -54,7 +54,7 @@ export function Sidebar({ activeTab, onTabChange, isOpen, onClose }) {
                 onTabChange(item.value);
                 onClose();
               }}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg mb-1
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg mb-1 
                 ${
                   item.value === activeTab
                     ? "bg-blue-600 text-white"
