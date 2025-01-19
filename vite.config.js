@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Hackathon-9.O/",
+  base: "/", // Ensure this is set correctly (adjust if deploying under a subdirectory)
 });
