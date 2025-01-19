@@ -6,6 +6,7 @@ import ProblemStatements from "./Pages/ProblemStatement/Problem";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <BrowserRouter>
@@ -17,9 +18,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
+      <Footer> </Footer>
     </BrowserRouter>
   );
 }
 
 export default App;
-
