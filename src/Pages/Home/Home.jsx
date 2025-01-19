@@ -8,6 +8,10 @@ function App() {
       {/* Use the imported components here */}
       <Landing />
       {/*<Timeline /> */}
+<<<<<<< HEAD
+      
+=======
+>>>>>>> 5435a6e8b6146ca9725c217947e4ffe2594ef24c
     </div>
   );
 }
