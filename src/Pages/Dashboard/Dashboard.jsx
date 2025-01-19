@@ -90,13 +90,13 @@ function App() {
 
       <main className="flex-1 p-4 lg:p-8">
         <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ">
             <button
               onClick={() => setIsSidebarOpen(true)}
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-white p-2 pt-16"
             >
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 "
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -109,11 +109,11 @@ function App() {
                 />
               </svg>
             </button>
-            <h1 className="text-xl lg:text-2xl font-bold text-white">
+            <h1 className="text-xl lg:text-2xl font-bold text-white pt-14">
               {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
             </h1>
           </div>
-          <div className="flex items-center gap-2 lg:gap-4">
+          <div className="flex items-center gap-2 lg:gap-4 pt-16">
             <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-[#2a2f3e] flex items-center justify-center text-white font-semibold">
               M1
             </div>
