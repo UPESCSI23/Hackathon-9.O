@@ -7,11 +7,7 @@ import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-<<<<<<< HEAD
 import About from "./Components/About/About";
-=======
-import About from "./Components/About/about";
->>>>>>> 41f0194f394ad56412afff47524b6131e4d508fd
 import Contact from "./Components/Contact/contact";
 function App() {
   return (
