@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-16 px-6">
+    <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-16 px-6 pt-28">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Hero Section */}
         <div className="text-center space-y-6">
