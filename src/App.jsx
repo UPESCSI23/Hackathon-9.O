@@ -9,9 +9,12 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/about";
 import Contact from "./Components/Contact/contact";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar> </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />

@@ -10,9 +10,11 @@ const About = () => {
             Welcome to Hackathon 9.0
           </h1>
           <p className="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
-            The ultimate innovation playground where developers, designers, and creators come together to build cutting-edge solutions using{" "}
+            The ultimate innovation playground where developers, designers, and
+            creators come together to build cutting-edge solutions using{" "}
             <span className="text-blue-400 font-semibold">AI</span> and{" "}
-            <span className="text-purple-400 font-semibold">IoT</span>. Join us to learn, compete, and create real-world impact.
+            <span className="text-purple-400 font-semibold">IoT</span>. Join us
+            to learn, compete, and create real-world impact.
           </p>
 
           {/* Space and Buttons */}
@@ -23,19 +25,24 @@ const About = () => {
             >
               Learn More
             </a>
-            
           </div>
         </div>
 
         {/* Vision Section */}
-        <div id="vision" className="relative bg-gray-800 p-12 rounded-2xl shadow-2xl">
+        <div
+          id="vision"
+          className="relative bg-gray-800 p-12 rounded-2xl shadow-2xl"
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-20 blur-lg pointer-events-none"></div>
           <div className="relative space-y-6">
             <h2 className="text-4xl font-bold text-center text-blue-400">
               Our Vision
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed text-center max-w-3xl mx-auto">
-              Empowering innovators to create sustainable and impactful solutions through collaborative problem-solving and cutting-edge technology. Hackathon 9.0 brings together bright minds to explore the future of AI and IoT.
+              Empowering innovators to create sustainable and impactful
+              solutions through collaborative problem-solving and cutting-edge
+              technology. Hackathon 9.0 brings together bright minds to explore
+              the future of AI and IoT.
             </p>
           </div>
         </div>
@@ -67,7 +74,9 @@ const About = () => {
               className="bg-gray-800 p-8 rounded-2xl shadow-lg text-center space-y-4 hover:scale-105 transition-transform duration-300"
             >
               <div className="text-5xl">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-blue-400">{feature.title}</h3>
+              <h3 className="text-xl font-bold text-blue-400">
+                {feature.title}
+              </h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
@@ -79,15 +88,18 @@ const About = () => {
             Why Choose Hackathon 9.0?
           </h2>
           <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Hackathon 9.0 isn’t just a competition—it's an unforgettable experience! Gain hands-on experience, network with top industry professionals, and create impactful solutions that could change the world.
+            Hackathon 9.0 isn’t just a competition—it's an unforgettable
+            experience! Gain hands-on experience, network with top industry
+            professionals, and create impactful solutions that could change the
+            world.
           </p>
           <div className="space-y-4">
-          <a
-            href="/contact"
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
-          >
-            Contact Us
-          </a>
+            <a
+              href="/contact"
+              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Contact Us
+            </a>
           </div>
         </div>
       </div>
