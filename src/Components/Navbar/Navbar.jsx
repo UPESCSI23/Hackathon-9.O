@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faUserPlus, faQuestionCircle, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
-  const [visiblityStatus, setVisiblityStatus] = useState(false);
+  const [visibilityStatus, setVisibilityStatus] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -21,14 +21,23 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Add or remove the 'no-scroll' class when the menu visibility changes
+    if (visibilityStatus) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [visibilityStatus]);
+
   // Toggle the mobile menu
   const toggleMenu = () => {
-    setVisiblityStatus(!visiblityStatus);
+    setVisibilityStatus(!visibilityStatus);
   };
 
   // Close the mobile menu
   const closeMenu = () => {
-    setVisiblityStatus(false);
+    setVisibilityStatus(false);
   };
 
   return (
@@ -36,10 +45,8 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="logo">
           <img src={logo} alt="Brand Logo" className="logo-img" />
-          <span className="logo-text">UPES-CSI</span>
         </div>
 
-        {/* Desktop Navigation Links */}
         <div className="nav-links">
           <Link to="/">
             <b>Home</b>
@@ -61,14 +68,13 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Hamburger Icon for Mobile Menu */}
         <button onClick={toggleMenu} className="menu-toggle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            className={`hamburger-icon ${visiblityStatus ? "open" : ""}`}
+            className={`hamburger-icon ${visibilityStatus ? "open" : ""}`}
           >
             <path
               strokeLinecap="round"
@@ -80,8 +86,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu - Sliding in from the right */}
-      <div className={`mobile-menu ${visiblityStatus ? "open" : ""}`}>
+      <div className={`mobile-menu ${visibilityStatus ? "open" : ""}`}>
         <div className="mt-11 flex flex-col justify-center items-center space-y-4">
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <FontAwesomeIcon icon={faHome} className="w-5 h-5 mr-2" />
@@ -104,7 +109,7 @@ const Navbar = () => {
             <b>Timeline</b>
           </Link>
           <Link to="/contact" className="flex items-center" onClick={closeMenu}>
-            <FontAwesomeIcon icon={faPhoneAlt} className="w-5 h-5 mr-2" />
+            <FontAwesomeIcon icon={faPhoneAlt} className="w-5 h-5 mr-2 fa-flip-horizontal"/>
             <b>Contact</b>
           </Link>
         </div>
