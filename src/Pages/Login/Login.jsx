@@ -105,6 +105,7 @@ export default function Login() {
       navigate("/dashboard");
     } catch (err) {
       alert(err.response.data.message);
+      return;
     }
 
     navigate("/dashboard");
