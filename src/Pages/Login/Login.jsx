@@ -77,18 +77,37 @@
 //   );
 // }
 
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Bot, Mail, Lock } from 'lucide-react';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Bot, Mail, Lock } from "lucide-react";
+import { api } from "../../utils/api";
+import useAuthStore from "../../store/useAuthStore";
+import useUserStore from "../../store/useUserStore";
 
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuthStore();
+  const { setUser } = useUserStore();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate('/dashboard');
+    try {
+      const res = await api.post("/user/signin", {
+        email,
+        password,
+      });
+      console.log(res.data);
+      setUser(res.data.user);
+      login();
+      localStorage.setItem("userStore", JSON.stringify(res.data.user));
+      navigate("/dashboard");
+    } catch (err) {
+      alert(err.response.data.message);
+    }
+
+    navigate("/dashboard");
   };
 
   return (
@@ -100,14 +119,21 @@ export default function Login() {
           <div className="flex justify-center mb-4">
             <Bot size={48} className="text-[#3B82F6]" />
           </div>
-          <h2 className="text-3xl font-bold text-white mb-2">Welcome to Hackathon 9.O!</h2>
-          <p className="text-gray-400">Enter your credentials to access your account</p>
+          <h2 className="text-3xl font-bold text-white mb-2">
+            Welcome to Hackathon 9.O!
+          </h2>
+          <p className="text-gray-400">
+            Enter your credentials to access your account
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div className="space-y-4">
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <Mail
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                size={20}
+              />
               <input
                 type="email"
                 required
@@ -119,7 +145,10 @@ export default function Login() {
             </div>
 
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <Lock
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                size={20}
+              />
               <input
                 type="password"
                 required
@@ -132,7 +161,10 @@ export default function Login() {
           </div>
 
           <div className="text-right">
-            <a href="#" className="text-[#3B82F6] hover:text-blue-400 text-sm transition-colors">
+            <a
+              href="#"
+              className="text-[#3B82F6] hover:text-blue-400 text-sm transition-colors"
+            >
               Forgot your password?
             </a>
           </div>
@@ -146,8 +178,11 @@ export default function Login() {
         </form>
 
         <p className="text-center text-gray-400 mt-4">
-          Don't have an account?{' '}
-          <Link to="/signup" className="text-[#3B82F6] hover:text-blue-400 font-medium">
+          Don't have an account?{" "}
+          <Link
+            to="/signup"
+            className="text-[#3B82F6] hover:text-blue-400 font-medium"
+          >
             Sign up now
           </Link>
         </p>
