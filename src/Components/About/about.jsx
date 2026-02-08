@@ -4,7 +4,6 @@ const About = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-16 px-6 pt-28">
       <div className="max-w-7xl mx-auto space-y-16">
-        {/* Hero Section */}
         <div className="text-center space-y-6">
           <h1 className="text-5xl font-extrabold text-blue-500 tracking-wide drop-shadow-lg">
             Welcome to Hackathon 9.0
@@ -17,15 +16,14 @@ const About = () => {
             to learn, compete, and create real-world impact.
           </p>
 
-          {/* Space and Buttons */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <a
               href="#vision"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
             >
               Learn More
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Vision Section */}

@@ -39,49 +39,55 @@ const Footer = () => {
         {/* Social Media */}
         <div>
           <h3 className="font-semibold text-lg">Follow Us</h3>
+
           <div className="flex space-x-4 mt-4">
             <a
-              href="https://twitter.com/upescsi?t=1fOIJJfJp1H_R1hsg9bmbQ&s=08"
-              className="p-3 bg-gray-800 rounded-full hover:bg-blue-500"
+              href="https://twitter.com/upescsi"
+              className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-500 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-twitter text-lg"></i>
             </a>
+
             <a
               href="https://m.facebook.com/upescsi"
-              className="p-3 bg-gray-800 rounded-full hover:bg-blue-600"
+              className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-facebook"></i>
+              <i className="fab fa-facebook-f text-lg"></i>
             </a>
+
             <a
-              href="https://instagram.com/upescsi?igshid=MzRlODBiNWFlZA=="
-              className="p-3 bg-gray-800 rounded-full hover:bg-pink-500"
+              href="https://instagram.com/upescsi"
+              className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full hover:bg-pink-500 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram text-lg"></i>
             </a>
+
             <a
               href="https://www.linkedin.com/company/computer-society-of-india-upes/"
-              className="p-3 bg-gray-800 rounded-full hover:bg-blue-700"
+              className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-700 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin-in text-lg"></i>
             </a>
+
             <a
-              href="https://youtube.com/@UPESCSIOfficial?si=k3t6NWMvkzVyTQF7"
-              className="p-3 bg-gray-800 rounded-full hover:bg-red-500"
+              href="https://youtube.com/@UPESCSIOfficial"
+              className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full hover:bg-red-500 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-youtube"></i>
-            </a>{" "}
+              <i className="fab fa-youtube text-lg"></i>
+            </a>
           </div>
         </div>
+
 
         {/* Contact Us */}
         <div>
@@ -116,7 +122,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-        <p>Copyright 2025 &copy; UPES-CSI All Rights Reserved.</p>
+        <p>Copyright 2026 &copy; UPES-CSI All Rights Reserved.</p>
         <div className="space-x-4 mt-4 md:mt-0">
           <a
             href="https://merchant.razorpay.com/policy/OAG5Tj7G48iTNQ/terms"
@@ -125,16 +131,16 @@ const Footer = () => {
             Terms and Conditions
           </a>
           <a href="https://merchant.razorpay.com/policy/OAG5Tj7G48iTNQ/refund" className="hover:text-white">
-          Refund Policy
+            Refund Policy
           </a>
           <a href="https://merchant.razorpay.com/policy/OAG5Tj7G48iTNQ/shipping" className="hover:text-white">
-          Shipping Policy
+            Shipping Policy
           </a>
           <a href="https://merchant.razorpay.com/policy/OAG5Tj7G48iTNQ/privacy" className="hover:text-white">
-          Privacy Policy
+            Privacy Policy
           </a>
           <Link to="/contact" className="hover:text-white">
-          Contact Us
+            Contact Us
           </Link>
         </div>
       </div>

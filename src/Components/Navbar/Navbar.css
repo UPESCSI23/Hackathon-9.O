@@ -56,11 +56,17 @@
   color: white;
   text-decoration: none;
   padding: 8px;
-  transition: color 0.3s;
+  transition: background 0.3s;
+  border-radius: 10px;
 }
 
 .nav-links a:hover {
-  color: #d1d5db;
+  /* color: #d1d5db; */
+  background: #47444752;
+}
+
+.nav-links a:active {
+  color: #d1d5db; 
 }
 
 .menu-toggle {

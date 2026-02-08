@@ -48,7 +48,7 @@ function App() {
               </button>
 
               <button className="bg-transparent border-2 border-blue-500 hover:bg-blue-500/10 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                Learn More
+                <Link to="/about">Learn More</Link>
               </button>
             </div>
           </div>
